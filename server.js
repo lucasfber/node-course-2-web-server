@@ -55,6 +55,14 @@ app.get('/about', (req, res) => {
     });
 });
 
+app.get('/portfolio', (req, res) => {
+    res.render('portfolio.hbs', {
+        pageTitle : 'Portfolio',
+        portfolioLink : 'https://github.com/lucasfber',
+        linkTitle : 'My Porfolio'
+    });
+});
+
 app.get('/bad', (req, res) => {
     res.send({
         errorMessage : 'Unable to handle request'
